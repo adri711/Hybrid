@@ -1,0 +1,41 @@
+<html>
+<head>
+	<title>Hybrid | {{title}}</title>
+	<link rel='stylesheet' type='text/css' href="{{ url_for('static', filename='css/home.css') }}">
+	<link href="https://pagecdn.io/lib/easyfonts/fonts.css" rel="stylesheet" />
+	<script src="https://kit.fontawesome.com/b051312dea.js" crossorigin="anonymous"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+<body>
+	<div class='App-text'>
+		<!-- sidebar -->
+		<div class="sidenav">
+		  <h1>Hybrid</h1>
+		  <a href="#" class="active" name="home"><i class="fas fa-house-user"></i> Home</a>
+		  <a href="#" name="explore"><i class="fas fa-hashtag"></i> Explore</a>
+		  <a href="#" name="notifications"><i class="fas fa-bell"></i> Notifications</a>
+		  <a href="#" name="contact"><i class="far fa-address-book"></i> Contact</a>
+		  <a href="#" name="profile"><i class="fas fa-male"></i> Profile</a>
+		  <footer>
+		  	<img src="{{ url_for('static', filename='imgs/default_avatar.jpg') }}" width=32> <span class="tagname">adri711 <span class="id">#8217</span></span>
+		  </footer>
+		</div>
+		<div class="right_side">
+			<div class="container">
+				<div class="input_group">
+					<input type="text" name="" placeholder="Search across Hybrid...">
+				</div>
+			</div>
+		</div>
+		<!-- Navbar -->
+		<div class="topnav">
+		  <p>Home</p>
+		</div>
+		<!-- Page content -->
+		<div id="container" class="main">
+			
+		</div>
+	</div>
+	<script src="{{ url_for('static', filename='js/app.js')}}"></script>
+</body>
+</html>

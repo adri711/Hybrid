@@ -1,3 +1,4 @@
+// Page switcher
 const page_container = $("#container");
 load_page("home");
 selected_page = null;

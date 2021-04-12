@@ -1,13 +1,15 @@
 from flask import Flask, url_for
 from flask_socketio import SocketIO
 from flask_sqlalchemy import SQLAlchemy
-#from flask_bcrypt import Bcrypt
+from flask_bcrypt import Bcrypt
 
 application = Flask(__name__)
 socketio = SocketIO(application, cors_allowed_origins="*")
+application.config['SECRET_KEY'] = "my secret key"
 application.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///site.db'
 db = SQLAlchemy(application)
+bcrypt = Bcrypt(application)
 
 # Importing other modules
-from src.routes import*
-from src.models import*
+from src.routes import *
+from src.models import *

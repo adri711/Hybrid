@@ -12,10 +12,10 @@
 	<div class="form_division">
 		<center>
 			<form method="POST">
-				<input type="text" placeholder="Email">
-				<input type="password" placeholder="Password">
-				<input type="submit" value="Login" class="primary">
-				<hr>
+				{{form.email()}}
+				{{form.password()}}
+				{{form.submit(class="primary")}}
+				<hr> <!--  -->
 				<input type="submit" value="Register" class="secondary">
 			</form>
 		</center>

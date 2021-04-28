@@ -1,12 +1,23 @@
+<div class="right_side" data-size="50">
+	<div class="container" id="right_container">
+		<div class="input_group">
+			<input type="text" name="" placeholder="Search across Hybrid...">
+		</div>
+		<div>
+			Hello, World!
+		</div>
+	</div>
+</div>
 <div class="new_post">
 	<img src="{{ url_for('static', filename='imgs/default_avatar.jpg') }}" width=40>
 	<textarea placeholder="What's on your mind, Adrian?" "></textarea> <br>
 	<div class="icons">
 		<i class="fas fa-file-image"></i><i class="fas fa-photo-video"></i><i class="fas fa-icons"></i><i class="fas fa-file"></i>
 	</div>
- 	<button>Submit</button>
+	<button>Submit</button>
 </div>
-<div class="post">
+
+<!--<div class="post">
 	<img src="{{ url_for('static', filename='imgs/default_avatar.jpg') }}" width=40><br>
 	<div class="ident">adri711</div><span class="hashtag">#2714</span> <br>
 	<div class="post_content">
@@ -15,29 +26,19 @@
 	<div class="icons">
 		<i class="far fa-heart"></i><i class="far fa-comment"></i><i class="far fa-share-square"></i>
 	</div>
-</div>
-<div class="post">
-	<img src="{{ url_for('static', filename='imgs/default_avatar.jpg') }}" width=40><br>
-	<div class="ident">adri711</div><span class="hashtag">#2714</span> <br>
-	<div class="post_content">
-		Nam imperdiet dui vel lectus mattis, at vehicula erat pretium. Nam volutpat augue nec eleifend bibendum. Duis tincidunt diam sit amet iaculis molestie. Aenean vel felis a risus pulvinar sagittis. Suspendisse bibendum sem sed venenatis pellentesque. Pellentesque ante leo, consectetur ac pulvinar pretium, tincidunt vel enim. Nullam consequat nibh nunc, lacinia malesuada neque vehicula sit amet. Mauris dictum ex id ipsum pulvinar mollis. Nunc lobortis consequat leo, eu viverra mi blandit vel. Aenean semper sit amet nisl in commodo. Vestibulum ut risus ultrices, porta augue non, commodo sem. Nullam eu ultricies purus.
-	</div> <br>
-	<div class="icons">
-		<i class="far fa-heart"></i><i class="far fa-comment"></i><i class="far fa-share-square"></i>
-	</div>
-</div>
-<div class="post">
-	<img src="{{ url_for('static', filename='imgs/default_avatar.jpg') }}" width=40><br>
-	<div class="ident">adri711</div><span class="hashtag">#2714</span> <br>
-	<div class="post_content">
-		Donec lacinia, orci sed volutpat interdum, arcu mauris sagittis massa, eu egestas ex risus id quam. Phasellus vel sagittis leo. Fusce molestie lacus leo. Nam a cursus turpis. Sed neque massa, maximus eget risus id, facilisis lacinia nibh. Etiam dapibus commodo lectus, non vulputate nunc lacinia in. Praesent pharetra, erat quis hendrerit tincidunt, odio purus pellentesque enim, at sodales tellus lorem a tortor. Phasellus condimentum viverra sapien. Suspendisse non rhoncus tortor. Sed accumsan lacinia nunc, ut fermentum turpis condimentum eget. Quisque maximus ligula et placerat posuere. Proin vitae porttitor purus, et ultrices quam. Vivamus dictum nisl id malesuada lacinia. Duis hendrerit, lorem at lobortis tempus, dolor mauris porta odio, quis pellentesque justo magna ut tellus. Nunc ut odio ut arcu facilisis fringilla quis pharetra lacus.
-	</div> <br>
-	<div class="icons">
-		<i class="far fa-heart"></i><i class="far fa-comment"></i><i class="far fa-share-square"></i>
-	</div>
-</div>
+</div>-->
+
 {% if posts %}
 	{% for post in posts %}
 		
 	{% endfor %}
+{% else %}
+	<center>
+		<div class="welcome_message">
+			<h3>Welcome to Hybird!</h3>
+			<p>This is the best place to see what’s happening in your world. Find some people and topics to follow now.</p>
+		</div>
+		<button class="btn">Lets go!</button>
+	</center>
 {% endif %}
+</div>

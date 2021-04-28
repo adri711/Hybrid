@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Hybrid | Register</title>
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/login.css')}}">
+</head>
+<body>
+	<div class="title">
+		<h1>Hybrid</h1>
+		<h2>Connect with gamers around the world!</h2>
+	</div>
+	<div class="form_division_2">
+		<center>
+			<form method="POST" action="" autocomplete="off">
+				{{ form.csrf_token }}
+				{{form.first_name()}}
+				{% if form.first_name.errors %}
+					{% for error in form.first_name.errors %}
+						<div class='error'>{{error}}</div>
+					{% endfor %}
+				{% endif %}
+				{{form.last_name()}}
+				{% if form.last_name.errors %}
+					{% for error in form.last_name.errors %}
+						<div class='error'>{{error}}</div>
+					{% endfor %}
+				{% endif %}
+				{{form.email()}}
+				{% if form.email.errors %}
+					{% for error in form.email.errors %}
+						<div class='error'>{{error}}</div>
+					{% endfor %}
+				{% endif %}
+				{{form.username()}}
+				{% if form.username.errors %}
+					{% for error in form.username.errors %}
+						<div class='error'>{{error}}</div>
+					{% endfor %}
+				{% endif %}
+				{{form.password()}}
+				{% if form.password.errors %}
+					{% for error in form.password.errors %}
+						<div class='error'>{{error}}</div>
+					{% endfor %}
+				{% endif %}
+				{{form.repeat_password()}}
+				{% if form.repeat_password.errors %}
+					{% for error in form.repeat_password.errors %}
+						<div class='error'>{{error}}</div>
+					{% endfor %}
+				{% endif %}
+				{{form.submit(class="primary")}}
+				<div class="sep"></div> or <div class="sep"></div>
+				<input type="button" value="Login" class="secondary" onclick="window.location= '{{ url_for('login') }}'">
+			</form>
+		</center>
+	</div>
+</body>
+</html>

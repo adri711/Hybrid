@@ -5,28 +5,23 @@
 	<link href="https://pagecdn.io/lib/easyfonts/fonts.css" rel="stylesheet" />
 	<script src="https://kit.fontawesome.com/b051312dea.js" crossorigin="anonymous"></script>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.0.1/socket.io.js" integrity="sha512-q/dWJ3kcmjBLU4Qc47E4A9kTB4m3wuTY7vkFJDTZKjTs8jhyGQnaUrxa0Ytd0ssMZhbNua9hE+E7Qv1j+DyZwA==" crossorigin="anonymous"></script>
 </head>
 <body>
-	<div class='App-text'>
+	<div class='App-text' data-nextpage="{{next_page}}">
 		<!-- sidebar -->
 		<div class="sidenav">
 		  <h1>Hybrid</h1>
-		  <a href="#" class="active" name="home"><i class="fas fa-house-user"></i> Home</a>
-		  <a href="#" name="explore"><i class="fas fa-hashtag"></i> Explore</a>
-		  <a href="#" name="notifications"><i class="fas fa-bell"></i> Activity</a>
-		  <a href="#" name="contact"><i class="far fa-address-book"></i> Contact</a>
-		  <a href="#" name="profile"><i class="fas fa-male"></i> Profile</a>
+		  <a href="#" name="home" id=home><i class="fas fa-house-user"></i> Home</a>
+		  <a href="#" name="explore" id=explore><i class="fas fa-hashtag"></i> Explore</a>
+		  <a href="#" name="notifications" id=notifications><i class="fas fa-bell"></i> Activity</a>
+		  <a href="#" name="contact" id=contact><i class="far fa-address-book"></i> Contact</a>
+		  <a href="#" name="profile" id=profile><i class="fas fa-male"></i> Profile</a>
 		  <footer>
-		  	<img src="{{ url_for('static', filename='imgs/default_avatar.jpg') }}" width=32> <span class="tagname">adri711 <span class="id">#8217</span></span>
+		  	<img src="{{ url_for('static', filename='imgs/default_avatar.jpg') }}" width=32> <span class="tagname">{{page_vars.user_info.username}} <span class="id">#{{page_vars.user_info.tag}}</span></span>
 		  </footer>
 		</div>
-		<div class="right_side">
-			<div class="container">
-				<div class="input_group">
-					<input type="text" name="" placeholder="Search across Hybrid...">
-				</div>
-			</div>
-		</div>
+
 		<!-- Navbar -->
 		<div class="topnav">
 		  <p>Home</p>
@@ -36,6 +31,14 @@
 			
 		</div>
 	</div>
-	<script src="{{ url_for('static', filename='js/app.js')}}"></script>
+	<div class="notification" id="notification">
+		<div class="content">
+			<div class="title">You received a message</div>
+			<div class="text"><b>adri711:</b> Hello, World!</div>
+		</div>
+	</div>
+	<script src="{{ url_for('static', filename='js/app.js')}}" type="module"></script>
+	<script src="{{ url_for('static', filename='js/chat.js') }}" type="module"></script>
+	<script src="{{ url_for('static', filename='js/network.js') }}" type="module"></script>
 </body>
 </html>

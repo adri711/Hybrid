@@ -9,19 +9,6 @@ body {
 	background-color:#111;
 }
 
-.topnav {
-  background-color: #111; width: 50%;
-  overflow: hidden; margin-left: 16.1%;
-  border-bottom: solid 1px #515151;
-  position:fixed; top: 0; z-index: 1;
-}
-
-.topnav p {
-  color: #f2f2f2; float: left;
-  padding: 16px 16px; text-decoration: none;
-  font-size: 17px; font-weight: 1000;
-}
-
 .sidenav {
   height: 100%; 
   width: 16%; 
@@ -37,7 +24,6 @@ body {
 .sidenav h1 {
 	padding: 10px 10px 10px 10px; color: white;
   margin: 10px 16px 16px 24px;
-
 }
 .sidenav a {
   padding: 10px 10px 10px 10px;
@@ -70,13 +56,28 @@ body {
   display: block; font-size: 10px;
   color: grey;
 }
+
+.topnav {
+  background-color: #111; width: 50%;
+  overflow: hidden; margin-left: 16.1%;
+  border-bottom: solid 1px #515151;
+  position:fixed; top: 0; z-index: 1;
+  height: 50px;
+}
+
+.topnav p {
+  color: #f2f2f2; float: left;
+  padding: 16px 16px; text-decoration: none;
+  font-size: 17px; font-weight: 1000;
+}
+
 .main {
   margin: 5% 0% 0px 16%;
   width: 50%; color: white;
 }
 .right_side {
   float: top;
-  margin-left: 66.1%;
+  margin-left: 50%;
   position: fixed;
   z-index: 1; 
   top: 0;
@@ -94,6 +95,15 @@ body {
 }
 .input_group input:focus, textarea:focus,button:focus {
   outline: none;
+  background-color: transparent;
+  border: solid 1px #194a92;
+}
+.bb {
+  padding-bottom: 8px;
+  border-bottom: solid 1px #515151;
+}
+.bb input {
+  min-width: 90%;
 }
 .new_post img, .post img {
   size: 5%;
@@ -150,4 +160,117 @@ body {
 .post > .icons {
   font-size: 12px;
   color: rgb(110, 118, 125);
+}
+.welcome_message {
+  padding: 25px;
+}
+.welcome_message p {
+  margin: 12px; color: #818181;
+}
+
+.btn {
+  padding: 15px;font-weight: 600;
+  border: transparent; color: white;
+  background-color: #2886de; border-radius: 16px;
+}
+.btn:hover {
+  color: black;
+  background-color: white;
+  cursor: pointer;
+}
+.contact .username {
+  margin-left: 12px;
+}
+.contact .tag {
+  color: #717171;
+  font-size: 12px;
+}
+.contact {
+  padding: 12px; width: 100%; border-bottom: solid 1px #515151;
+}
+.contact span {
+  position: relative; bottom: 15px; display: inline-block;
+}
+.contact .last_message {
+  display: inline-flexbox; color: #919191;
+  margin-left: 56px; font-size: 12px; position:relative;
+  bottom: 5px;
+}
+.contact img {
+  display: inline;
+  border-radius: 15px;
+}
+.contact:hover {
+  transition: background-color 0.3s;
+  background-color: rgba(41,41,41,0.6);
+  cursor: pointer;
+}
+.chat_box_bottom {
+  position: absolute; bottom: 0; width: 100%;
+  border-top: solid 1px #515151; padding: 6px;
+  background-color: #111;
+}
+.large input {
+  width: 45%;
+}
+.chat_box_bottom i {
+  color:#3693eb;
+  margin-left: 10px;
+}
+.chat_box_bottom i:hover {
+  color: white;
+  cursor: pointer;
+}
+.chat_box_top {
+  min-height: 50px; max-height: 50px; height:50px;
+  border-bottom: solid 1px #515151; text-indent: 12px;z-index: 2;
+}
+.chat_box_top h3 {
+  position:relative; top:10px;
+}
+.chat_box {
+  position:relative; top: 7px;
+  overflow-y: scroll;
+  height:76%; width: 100%;
+}
+.chat_box .container {
+  position: absolute; top: 5px;
+  width: 59%; height: 100%;
+}
+.container .sent {
+  display:flex; margin: 5px;
+  flex-direction:row-reverse;
+  border-radius: 7px;
+}
+.container .received {
+  display: flex; margin: 6px;
+}
+.blue_msg {
+  background-color: rgb(29,161,242);
+  padding:6px; border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px; font-size: 15px;
+  border-top-right-radius: 10px;
+}
+.grey_msg {
+  background-color: rgb(81,81,81);
+  padding:6px;font-size: 15px;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+  border-top-left-radius: 10px;
+}
+
+.notification {
+  z-index: 2; 
+  position: fixed; outline: solid rgb(39, 39, 39);
+  bottom: 12px; right: 12px;
+  width: 252px; height: 62px;
+  background-color: #222;
+  display: none;
+}
+.notification .title {
+  width: inherit; padding:5px; font-size: 12px;
+  background-color: #333; color: white;
+}
+.notification .text {
+  padding: 10px; color: white; font-size: 15px;
 }

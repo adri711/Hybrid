@@ -4,7 +4,7 @@ body {
 }
 .title {
 	position: fixed;
-	left: 15%; top: 32%;
+	left: 15%; top: 30%;
 	width: 26%; display: inline;
 }
 .title h1 {
@@ -16,10 +16,14 @@ body {
 	font-weight: 500;
 }
 .form_division {
-	position: absolute; top: 32%; right: 20%;
+	position: absolute; top: 30%; right: 20%;
 	color: white;
 }
-.form_division {
+.form_division_2 {
+	position: absolute; top: 16%; right: 20%;
+	color: white;
+}
+.form_division,.form_division_2 {
 	background-color: #222; border: solid 1px transparent;
 	border-radius: 8px; min-width: 25%; padding: 16px;
 	-moz-box-shadow: 0 0 3px #aaa;
@@ -34,19 +38,23 @@ input {
 	margin: 10px; padding: 0px; border-radius: 5px;
 	width: 92%; text-indent: 10px; min-height: 32px;
 }
-input[type="submit"] {
+input[type="button"], input[type="submit"] {
 	margin: 21px 0px 21px 0px; color: white;
 	font-weight: 560;
 }
 input:focus {
 	outline: none;
 }
-hr {
-	width: 80%; font-weight: 100;
+.sep {
+	width: 35%; height: 1px; display: inline-block;
+	background-color: white; position: relative; bottom: 5px;
 }
 .primary {
 	width: 92%; background-color: #3693eb;
 }
 .secondary {
-	width: 50%; background-color: green;
+	width: 50%; background-color: rgb(72, 150, 72);
+}
+.error {
+	color: red;
 }

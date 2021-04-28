@@ -1,0 +1,61 @@
+<div class="right_side" data-size='25'>
+    <div class="chat_box_top">
+        <h3>Hello, World</h3>
+    </div>
+    <div class="chat_box" >
+        <div class="container" id="chat_box">
+            <div class="sent">
+                <div class="blue_msg">Hello NIGGA!</div>
+            </div>
+            <div class="received">
+                <div class="grey_msg">Hello World!</div>
+            </div>
+        </div>
+    </div>
+    <div class="chat_box_bottom">
+        <div class="large input_group">
+            <i class="fas fa-icons"></i>
+            <i class="fas fa-images"></i>
+            <input type="text" name="" placeholder="Send a new message..." id="message_input" autocomplete="off">
+            <i class="fas fa-thumbs-up"></i>
+        </div>
+    </div>
+</div>
+<center>
+    <div class="bb input_group">
+        <input type="text" name="" placeholder="Search contacts...">
+    </div>
+</center>
+{% if contacts %}
+    {% for contact in contacts%}
+        <div class="contact active" name="{{ contact.username }}" data-userid="{{ contact.id }}" id="u{{ contact.id }}">
+            <img src="{{ url_for('static', filename='imgs/default_avatar.jpg') }}" width=40>
+            <span class="username"><b>{{contact.username}}</b></span>
+            <span class="tag">#{{contact.tag}}</span>
+            {% if contact.last_message.origin_userid == user.id %}
+                <div class="last_message">You: {{contact.last_message.message}}</div>
+            {% else %}
+                <div class="last_message">{{contact.last_message.message}}</div>
+            {% endif %}
+        </div>
+    {% endfor %}
+{% else %}
+<div class="contact">
+    <img src="{{ url_for('static', filename='imgs/default_avatar.jpg') }}" width=40>
+	<span class="username">adri711</span>
+    <span class="tag">#2714</span>
+    <div class="last_message">You: Hello, World!</div>
+</div>
+<div class="contact">
+    <img src="{{ url_for('static', filename='imgs/default_avatar.jpg') }}" width=40>
+	<span class="username">adri711</span>
+    <span class="tag">#2714</span>
+    <div class="last_message">You: Hello, World!</div>
+</div>
+<div class="contact">
+    <img src="{{ url_for('static', filename='imgs/default_avatar.jpg') }}" width=40>
+	<span class="username">adri711</span>
+    <span class="tag">#2714</span>
+    <div class="last_message">You: Hello, World!</div>
+</div>
+{% endif %}

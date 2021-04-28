@@ -1,0 +1,8 @@
+# Server app
+APP_PORT = 5000
+DEBUG = True
+
+# database related
+MAX_USERS_PER_USERNAME = 9999
+TAG_DIGIT_COUNT = 4
+INITIAL_TAG_FOR_USERNAME = '0001'
